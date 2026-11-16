@@ -1,0 +1,15 @@
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+
+export default defineConfig({
+  tanstackStart: {
+    server: { entry: "server" },
+  },
+  vite: {
+    server: {
+      host: true, // important for external access
+      allowedHosts: [
+        "restaurant-pos.zynotechnologies.com"
+      ]
+    }
+  }
+});
